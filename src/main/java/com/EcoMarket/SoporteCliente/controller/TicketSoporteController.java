@@ -13,7 +13,8 @@ import com.EcoMarket.SoporteCliente.service.TicketSoporteService;
 public class TicketSoporteController {
     @Autowired
     private TicketSoporteService ticketSoporteService;
-
+    
+    @PostMapping
     public ResponseEntity<TicketSoporte> crearTicket(@RequestBody TicketSoporte ticketSoporte) {
         try {
             TicketSoporte nuevoTicket = ticketSoporteService.crearTicket(ticketSoporte);
